@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="MauiLocalAuth.Dialogs.LocalAuthDialog"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:MauiLocalAuth.Controls"
+             xmlns:selectors="clr-namespace:MauiLocalAuth.Selectors"
+             xmlns:shared_controls="clr-namespace:MauiShared.Controls;assembly=MauiShared"
+             xmlns:view_models="clr-namespace:MauiLocalAuth.ViewModels"
+             x:DataType="view_models:LocalAuthDialogViewModel"
+             BackgroundColor="Transparent">
+
+
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<!--  Шаблон для PatternLock  -->
+			<DataTemplate x:Key="PATTERN_TEMPLATE">
+				<controls:PatternLockView HeightRequest="400"
+				                          HorizontalOptions="Center"
+				                          VerticalOptions="Center"
+				                          WidthRequest="400" />
+			</DataTemplate>
+
+			<!--  Шаблон для PinCodeLock  -->
+			<DataTemplate x:Key="PIN_CODE_TEMPLATE">
+				<controls:PinCodeLockView HeightRequest="400"
+				                          HorizontalOptions="Center"
+				                          VerticalOptions="Center"
+				                          WidthRequest="400" />
+			</DataTemplate>
+
+			<!--  Селектор для выбора контента Pin или Pattern  -->
+			<selectors:AuthTemplateSelector x:Key="AuthSelector"
+			                                PatternTemplate="{StaticResource PATTERN_TEMPLATE}"
+			                                PinTemplate="{StaticResource PIN_CODE_TEMPLATE}" />
+
+		</ResourceDictionary>
+	</ContentPage.Resources>
+
+	<shared_controls:DialogContainer CloseDialogCommand="{Binding CloseCommand}">
+		<Grid HorizontalOptions="Fill"
+		      RowDefinitions="Auto, *"
+		      VerticalOptions="Fill">
+
+			<Image Margin="0,40,0,40"
+			       HeightRequest="100"
+			       HorizontalOptions="Center"
+			       Source="lock_logo.png"
+			       VerticalOptions="Center"
+			       WidthRequest="30" />
+
+			<ContentView x:Name="AuthContentView"
+			             Grid.Row="1" />
+		</Grid>
+	</shared_controls:DialogContainer>
+</ContentPage>

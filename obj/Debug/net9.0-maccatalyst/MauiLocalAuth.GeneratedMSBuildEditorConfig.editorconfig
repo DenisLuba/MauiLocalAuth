@@ -1,0 +1,48 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.MvvmToolkitEnableINotifyPropertyChangingSupport = true
+build_property._MvvmToolkitIsUsingWindowsRuntimePack = false
+build_property.CsWinRTComponent = 
+build_property.CsWinRTAotOptimizerEnabled = 
+build_property.CsWinRTAotWarningLevel = 
+build_property.TargetFramework = net9.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MauiLocalAuth
+build_property.ProjectDir = V:\MAUI Projects\MauiLocalAuth\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[V:/MAUI Projects/MauiLocalAuth/Controls/PatternLockView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiLocalAuth.Controls.PatternLockView.xaml
+build_metadata.AdditionalFiles.TargetPath = Controls\PatternLockView.xaml
+build_metadata.AdditionalFiles.RelativePath = Controls\PatternLockView.xaml
+
+[V:/MAUI Projects/MauiLocalAuth/Controls/PinCodeLockView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiLocalAuth.Controls.PinCodeLockView.xaml
+build_metadata.AdditionalFiles.TargetPath = Controls\PinCodeLockView.xaml
+build_metadata.AdditionalFiles.RelativePath = Controls\PinCodeLockView.xaml
+
+[V:/MAUI Projects/MauiLocalAuth/Dialogs/LocalAuthDialog.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiLocalAuth.Dialogs.LocalAuthDialog.xaml
+build_metadata.AdditionalFiles.TargetPath = Dialogs\LocalAuthDialog.xaml
+build_metadata.AdditionalFiles.RelativePath = Dialogs\LocalAuthDialog.xaml
+
+[V:/MAUI Projects/MauiLocalAuth/Dialogs/SelectEnterMethodPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiLocalAuth.Dialogs.SelectEnterMethodPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Dialogs\SelectEnterMethodPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Dialogs\SelectEnterMethodPopup.xaml

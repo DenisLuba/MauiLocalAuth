@@ -1,0 +1,98 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "V:\\MAUI Projects\\MauiLocalAuth\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AB9E7CDE-F5DC-41EA-82E9-84BEDDE7ACA3}|MauiLocalAuth.csproj|v:\\maui projects\\mauilocalauth\\dialogs\\selectentermethodpopup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AB9E7CDE-F5DC-41EA-82E9-84BEDDE7ACA3}|MauiLocalAuth.csproj|solutionrelative:dialogs\\selectentermethodpopup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB9E7CDE-F5DC-41EA-82E9-84BEDDE7ACA3}|MauiLocalAuth.csproj|v:\\maui projects\\mauilocalauth\\viewmodels\\selectentermethodpopupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB9E7CDE-F5DC-41EA-82E9-84BEDDE7ACA3}|MauiLocalAuth.csproj|solutionrelative:viewmodels\\selectentermethodpopupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57D35A40-9DA2-D6A7-40FB-01C53DCAD2A6}|..\\MauiShared\\MauiShared.csproj|v:\\maui projects\\mauishared\\services\\implementations\\localauthpreferencesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LocalAuthPreferencesService.cs",
+              "DocumentMoniker": "V:\\MAUI Projects\\MauiShared\\Services\\Implementations\\LocalAuthPreferencesService.cs",
+              "RelativeDocumentMoniker": "..\\MauiShared\\Services\\Implementations\\LocalAuthPreferencesService.cs",
+              "ToolTip": "V:\\MAUI Projects\\MauiShared\\Services\\Implementations\\LocalAuthPreferencesService.cs",
+              "RelativeToolTip": "..\\MauiShared\\Services\\Implementations\\LocalAuthPreferencesService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T21:13:54.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{f5cd1b51-c771-5648-966f-646d419b1e7c}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SelectEnterMethodPopup.xaml",
+              "DocumentMoniker": "V:\\MAUI Projects\\MauiLocalAuth\\Dialogs\\SelectEnterMethodPopup.xaml",
+              "RelativeDocumentMoniker": "Dialogs\\SelectEnterMethodPopup.xaml",
+              "ToolTip": "V:\\MAUI Projects\\MauiLocalAuth\\Dialogs\\SelectEnterMethodPopup.xaml",
+              "RelativeToolTip": "Dialogs\\SelectEnterMethodPopup.xaml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAABEAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-13T21:08:02.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SelectEnterMethodPopupViewModel.cs",
+              "DocumentMoniker": "V:\\MAUI Projects\\MauiLocalAuth\\ViewModels\\SelectEnterMethodPopupViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\SelectEnterMethodPopupViewModel.cs",
+              "ToolTip": "V:\\MAUI Projects\\MauiLocalAuth\\ViewModels\\SelectEnterMethodPopupViewModel.cs",
+              "RelativeToolTip": "ViewModels\\SelectEnterMethodPopupViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T21:04:41.201Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

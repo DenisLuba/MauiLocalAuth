@@ -1,0 +1,388 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MauiLocalAuth</name>
+    </assembly>
+    <members>
+        <member name="M:MauiLocalAuth.Controls.PatternLockDrawable.#ctor">
+            <summary>
+            Конструктор по умолчанию, создаёт сетку 3x3 с размером 300x300.
+            </summary>
+        </member>
+        <member name="M:MauiLocalAuth.Controls.PatternLockDrawable.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Конструктор, создаёт сетку 3x3 с указанными размерами.
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:MauiLocalAuth.Controls.PatternLockDrawable.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Конструктор, создаёт сетку с указанным количеством строк и столбцов, а также размерами.
+            </summary>
+            <param name="rows"></param>
+            <param name="columns"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:MauiLocalAuth.Controls.PatternLockDrawable.Draw(Microsoft.Maui.Graphics.ICanvas,Microsoft.Maui.Graphics.RectF)">
+            <summary>
+            Рисует содержимое на указанный холст в данном прямоугольнике.
+            </summary>
+            <param name="canvas">Представляет собой не зависящий от платформы холст, 
+            на котором можно рисовать 2D-графику, используя типы из пространства имен Microsoft.Maui.Graphics.</param>
+            <param name="dirtyRect">Представляет собой прямоугольник с координатами x, y, шириной и высотой типа float.</param>
+        </member>
+        <member name="M:MauiLocalAuth.Controls.PatternLockDrawable.StartPath(Microsoft.Maui.Graphics.PointF)">
+            <summary>
+            Начинает новый путь с указанного касания.
+            </summary>
+        </member>
+        <member name="M:MauiLocalAuth.Controls.PatternLockDrawable.UpdatePath(Microsoft.Maui.Graphics.PointF)">
+            <summary>
+            Обновляет текущий путь с новым касанием.
+            </summary>
+        </member>
+        <member name="M:MauiLocalAuth.Controls.PatternLockDrawable.EndPath">
+            <summary>
+            Завершает текущий путь.
+            </summary>
+        </member>
+        <member name="M:MauiLocalAuth.Controls.PatternLockDrawable.TrySelectPoint(Microsoft.Maui.Graphics.PointF)">
+            <summary>
+            Пытается добавить точку в список выбранных, если касание близко к точке и она ещё не выбрана.
+            </summary>
+            <param name="touch"></param>
+        </member>
+        <member name="M:MauiLocalAuth.Controls.PatternLockDrawable.Distance(Microsoft.Maui.Graphics.PointF,Microsoft.Maui.Graphics.PointF)">
+            <summary>
+            Вычисляет расстояние между двумя точками.
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MauiLocalAuth.Controls.PatternLockDrawable.GenerateGrid(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Возвращает список точек для графического узора экрана блокировки.
+            </summary>
+            <param name="rows">Количество строк.</param>
+            <param name="columns">Количество столбцов.</param>
+            <param name="width">Ширина сетки.</param>
+            <param name="height">Высота сетки.</param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:MauiLocalAuth.Controls.PatternLockDrawable.Clear">
+            <summary>
+            Очищает выбранные точки и текущее касание.
+            </summary>
+        </member>
+        <member name="M:MauiLocalAuth.Controls.PatternLockView.OnStartInteraction(System.Object,Microsoft.Maui.Controls.TouchEventArgs)">
+            <summary>
+            Обрабатывает начало взаимодействия с Canvas.
+            </summary>
+        </member>
+        <member name="M:MauiLocalAuth.Controls.PatternLockView.OnDragInteraction(System.Object,Microsoft.Maui.Controls.TouchEventArgs)">
+            <summary>
+            Обрабатывает движение пальца/мыши по Canvas.
+            </summary>
+        </member>
+        <member name="M:MauiLocalAuth.Controls.PatternLockView.OnEndInteraction(System.Object,Microsoft.Maui.Controls.TouchEventArgs)">
+            <summary>
+            Обрабатывает завершение взаимодействия с Canvas.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MauiLocalAuth.Controls.PatternLockView.Clear">
+            <summary>
+            Очищает выбранные точки и перерисовывает Canvas.
+            </summary>
+        </member>
+        <member name="M:MauiLocalAuth.Controls.PinCodeLockView.AddDigit(System.String)">
+            <summary>
+            Добавляет цифру к текущему PIN-коду.
+            </summary>
+            <param name="digit">Цифра в формате <see cref="T:System.String"/></param>
+        </member>
+        <member name="M:MauiLocalAuth.Controls.PinCodeLockView.RemoveDigit">
+            <summary>
+            Удаляет последнюю цифру из текущего PIN-кода.
+            </summary>
+        </member>
+        <member name="M:MauiLocalAuth.Controls.PinCodeLockView.Clear">
+            <summary>
+            Очищает текущий PIN-код.
+            </summary>
+        </member>
+        <member name="M:MauiLocalAuth.Dialogs.LocalAuthDialog.OnPinCompleted(System.Object,System.String)">
+            <summary>
+            Обрабатывает завершение ввода PIN -кода пользователем.
+            </summary>
+            <remarks>Этот метод обрабатывает предоставленный PIN -код асинхронно путем делегирования его связанной
+            модели представления (ViewModel). Убедитесь, что <paramref name = "pinCode"/> действителен и не пуст.</remarks>
+            <param name="sender">Источник события. Этот параметр может быть <see langword="null"/>.</param>
+            <param name="pinCode">PIN -код, введенный пользователем. Не может быть <see langword="null"/> или пустой.</param>
+        </member>
+        <member name="M:MauiLocalAuth.Dialogs.LocalAuthDialog.OnPatternCompleted(System.Object,System.String)">
+            <summary>
+            Обрабатывает завершение ввода узора пользователем.
+            </summary>
+            <remarks>Этот метод обрабатывает предоставленный узор асинхронно путем делегирования его связанной
+            модели представления (ViewModel). Убедитесь, что <paramref name = "pattern"/> действителен и не пуст.</remarks>
+            <param name="sender">Источник события. Этот параметр может быть <see langword="null"/>.</param>
+            <param name="pattern">Графический узор, нарисованный пользователем, интерпретированный как числовая последовательность в формате <see cref="T:System.String"/>. 
+            Не может быть <see langword="null"/> или пустой.</param>
+        </member>
+        <member name="T:MauiLocalAuth.Resources.Strings.LocalAuthDialogViewModelResources.ResourcesLocalAuthDialogViewModel">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:MauiLocalAuth.Resources.Strings.LocalAuthDialogViewModelResources.ResourcesLocalAuthDialogViewModel.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:MauiLocalAuth.Resources.Strings.LocalAuthDialogViewModelResources.ResourcesLocalAuthDialogViewModel.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:MauiLocalAuth.Resources.Strings.LocalAuthDialogViewModelResources.ResourcesLocalAuthDialogViewModel.confirmation">
+            <summary>
+              Looks up a localized string similar to Confirmation.
+            </summary>
+        </member>
+        <member name="P:MauiLocalAuth.Resources.Strings.LocalAuthDialogViewModelResources.ResourcesLocalAuthDialogViewModel.error">
+            <summary>
+              Looks up a localized string similar to Error.
+            </summary>
+        </member>
+        <member name="P:MauiLocalAuth.Resources.Strings.LocalAuthDialogViewModelResources.ResourcesLocalAuthDialogViewModel.invalid_pattern">
+            <summary>
+              Looks up a localized string similar to Incorrect graphic pattern. Try again..
+            </summary>
+        </member>
+        <member name="P:MauiLocalAuth.Resources.Strings.LocalAuthDialogViewModelResources.ResourcesLocalAuthDialogViewModel.invalid_pin_code">
+            <summary>
+              Looks up a localized string similar to Invalid PIN code. Try again..
+            </summary>
+        </member>
+        <member name="P:MauiLocalAuth.Resources.Strings.LocalAuthDialogViewModelResources.ResourcesLocalAuthDialogViewModel.repeat_pattern">
+            <summary>
+              Looks up a localized string similar to Repeat the pattern..
+            </summary>
+        </member>
+        <member name="P:MauiLocalAuth.Resources.Strings.LocalAuthDialogViewModelResources.ResourcesLocalAuthDialogViewModel.repeat_pin">
+            <summary>
+              Looks up a localized string similar to Repeat the PIN code..
+            </summary>
+        </member>
+        <member name="T:MauiLocalAuth.Resources.Strings.SelectEnterMethodPopupResources.ResourcesSelectEnterMethodPopup">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:MauiLocalAuth.Resources.Strings.SelectEnterMethodPopupResources.ResourcesSelectEnterMethodPopup.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:MauiLocalAuth.Resources.Strings.SelectEnterMethodPopupResources.ResourcesSelectEnterMethodPopup.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:MauiLocalAuth.Resources.Strings.SelectEnterMethodPopupResources.ResourcesSelectEnterMethodPopup.apply">
+            <summary>
+              Looks up a localized string similar to Apply.
+            </summary>
+        </member>
+        <member name="P:MauiLocalAuth.Resources.Strings.SelectEnterMethodPopupResources.ResourcesSelectEnterMethodPopup.face_id">
+            <summary>
+              Looks up a localized string similar to Face Id.
+            </summary>
+        </member>
+        <member name="P:MauiLocalAuth.Resources.Strings.SelectEnterMethodPopupResources.ResourcesSelectEnterMethodPopup.fingerprint">
+            <summary>
+              Looks up a localized string similar to Fingerprint.
+            </summary>
+        </member>
+        <member name="P:MauiLocalAuth.Resources.Strings.SelectEnterMethodPopupResources.ResourcesSelectEnterMethodPopup.pattern">
+            <summary>
+              Looks up a localized string similar to Graphic pattern.
+            </summary>
+        </member>
+        <member name="P:MauiLocalAuth.Resources.Strings.SelectEnterMethodPopupResources.ResourcesSelectEnterMethodPopup.pin_code">
+            <summary>
+              Looks up a localized string similar to PIN CODE.
+            </summary>
+        </member>
+        <member name="P:MauiLocalAuth.Resources.Strings.SelectEnterMethodPopupResources.ResourcesSelectEnterMethodPopup.select_additional_login_method">
+            <summary>
+              Looks up a localized string similar to Select an additional login method.
+            </summary>
+        </member>
+        <member name="P:MauiLocalAuth.Resources.Strings.SelectEnterMethodPopupResources.ResourcesSelectEnterMethodPopup.select_login_method">
+            <summary>
+              Looks up a localized string similar to Select the application login method.
+            </summary>
+        </member>
+        <member name="P:MauiLocalAuth.Resources.Strings.SelectEnterMethodPopupResources.ResourcesSelectEnterMethodPopup.select_main_login_method">
+            <summary>
+              Looks up a localized string similar to Select the main login method.
+            </summary>
+        </member>
+        <member name="P:MauiLocalAuth.Resources.Strings.SelectEnterMethodPopupResources.ResourcesSelectEnterMethodPopup.skip">
+            <summary>
+              Looks up a localized string similar to Skip.
+            </summary>
+        </member>
+        <member name="T:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="M:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel.InitializeAsync">
+            <summary>
+            Загружает настройки методов локальной аутентификации и обновляет свойства IsPattern и IsPinCode.
+            </summary>
+        </member>
+        <member name="M:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel.HandlePatternInputAsync(System.String)">
+            <summary>
+            Обрабатывает ввод графического узора.
+            </summary>
+        </member>
+        <member name="M:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel.PatternCompletedAsync(System.String)">
+            <summary>
+            Обрабатывает завершение ввода графического узора.
+            </summary>
+        </member>
+        <member name="M:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel.PinCodeCompletedAsync(System.String)">
+            <summary>
+            Обрабатывает завершение ввода PIN-кода.
+            </summary>
+        </member>
+        <member name="P:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel.IsPattern">
+            <inheritdoc cref="F:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel._isPattern"/>
+        </member>
+        <member name="P:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel.IsPinCode">
+            <inheritdoc cref="F:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel._isPinCode"/>
+        </member>
+        <member name="P:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel.CurrentAuthTemplateKey">
+            <inheritdoc cref="F:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel._currentAuthTemplateKey"/>
+        </member>
+        <member name="F:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel.pinCodeCompletedCommand">
+            <summary>The backing field for <see cref="P:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel.PinCodeCompletedCommand"/>.</summary>
+        </member>
+        <member name="P:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel.PinCodeCompletedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel.PinCodeCompletedAsync(System.String)"/>.</summary>
+        </member>
+        <member name="F:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel.closeCommand">
+            <summary>The backing field for <see cref="P:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel.CloseCommand"/>.</summary>
+        </member>
+        <member name="P:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel.CloseCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel.CloseAsync"/>.</summary>
+        </member>
+        <member name="T:MauiLocalAuth.ViewModels.SelectEnterMethodPopupViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MauiLocalAuth.ViewModels.SelectEnterMethodPopupViewModel.IsPatternSelected">
+            <inheritdoc cref="F:MauiLocalAuth.ViewModels.SelectEnterMethodPopupViewModel._isPatternSelected"/>
+        </member>
+        <member name="P:MauiLocalAuth.ViewModels.SelectEnterMethodPopupViewModel.IsPinSelected">
+            <inheritdoc cref="F:MauiLocalAuth.ViewModels.SelectEnterMethodPopupViewModel._isPinSelected"/>
+        </member>
+        <member name="P:MauiLocalAuth.ViewModels.SelectEnterMethodPopupViewModel.IsFaceIdSelected">
+            <inheritdoc cref="F:MauiLocalAuth.ViewModels.SelectEnterMethodPopupViewModel._isFaceIdSelected"/>
+        </member>
+        <member name="P:MauiLocalAuth.ViewModels.SelectEnterMethodPopupViewModel.IsFingerprintSelected">
+            <inheritdoc cref="F:MauiLocalAuth.ViewModels.SelectEnterMethodPopupViewModel._isFingerprintSelected"/>
+        </member>
+        <member name="F:MauiLocalAuth.ViewModels.SelectEnterMethodPopupViewModel.applyCommand">
+            <summary>The backing field for <see cref="P:MauiLocalAuth.ViewModels.SelectEnterMethodPopupViewModel.ApplyCommand"/>.</summary>
+        </member>
+        <member name="P:MauiLocalAuth.ViewModels.SelectEnterMethodPopupViewModel.ApplyCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MauiLocalAuth.ViewModels.SelectEnterMethodPopupViewModel.ApplyAsync"/>.</summary>
+        </member>
+        <member name="F:MauiLocalAuth.ViewModels.SelectEnterMethodPopupViewModel.toggleFingerprintCommand">
+            <summary>The backing field for <see cref="P:MauiLocalAuth.ViewModels.SelectEnterMethodPopupViewModel.ToggleFingerprintCommand"/>.</summary>
+        </member>
+        <member name="P:MauiLocalAuth.ViewModels.SelectEnterMethodPopupViewModel.ToggleFingerprintCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MauiLocalAuth.ViewModels.SelectEnterMethodPopupViewModel.ToggleFingerprint"/>.</summary>
+        </member>
+        <member name="F:MauiLocalAuth.ViewModels.SelectEnterMethodPopupViewModel.toggleFaceIdCommand">
+            <summary>The backing field for <see cref="P:MauiLocalAuth.ViewModels.SelectEnterMethodPopupViewModel.ToggleFaceIdCommand"/>.</summary>
+        </member>
+        <member name="P:MauiLocalAuth.ViewModels.SelectEnterMethodPopupViewModel.ToggleFaceIdCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MauiLocalAuth.ViewModels.SelectEnterMethodPopupViewModel.ToggleFaceId"/>.</summary>
+        </member>
+        <member name="T:MauiLocalAuth.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsPattern">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsPattern" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsPinCode">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsPinCode" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentAuthTemplateKey">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentAuthTemplateKey" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsPatternSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsPatternSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsPinSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsPinSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsFaceIdSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsFaceIdSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsFingerprintSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsFingerprintSelected" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsPattern">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsPattern" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsPinCode">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsPinCode" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentAuthTemplateKey">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentAuthTemplateKey" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsPatternSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsPatternSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsPinSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsPinSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsFaceIdSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsFaceIdSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsFingerprintSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsFingerprintSelected" generated properties.</summary>
+        </member>
+    </members>
+</doc>

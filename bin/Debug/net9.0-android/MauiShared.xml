@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MauiShared</name>
+    </assembly>
+    <members>
+        <member name="F:MauiShared.Controls.DialogContainer.CloseDialogCommandProperty">
+            <summary>
+            Определяет <see cref="P:MauiShared.Controls.DialogContainer.CloseDialogCommand"/> привязываемое свойство.
+            </summary>
+            <remarks>Это свойство представляет собой команду, которая может быть выполнена для закрытия диалога.</remarks>
+        </member>
+        <member name="P:MauiShared.Controls.DialogContainer.CloseDialogCommand">
+            <summary>
+            Получает или устанавливает команду, которая выполняется для закрытия диалога.
+            </summary>
+            <remarks>Команда может быть связана с элементом пользовательского интерфейса, таким как кнопка, чтобы запустить закрытие диалога. 
+            Убедитесь, что команда правильно реализована для обработки логики закрытия диалога.</remarks>
+        </member>
+        <member name="M:MauiShared.Services.LocalAuthPreferencesService.SetAuthMethodAsync(MauiShared.Services.LocalAuthMethod)">
+            <summary>
+            Устанавливает метод входа в приложение.
+            </summary>
+            <param name="method">Метод входа в приложение.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MauiShared.Services.LocalAuthPreferencesService.GetAuthMethodAsync">
+            <summary>
+            Возвращает метод входа в приложение.
+            </summary>
+            <returns>Метод входа в приложение.</returns>
+        </member>
+        <member name="M:MauiShared.Services.LocalAuthPreferencesService.ClearAuthMethod">
+            <summary>
+            Очищает сохраненные методы входа в приложение
+            </summary>
+        </member>
+        <member name="M:MauiShared.Services.NavigationService.GetNavigation">
+            <summary>
+            Выдает текущий экземпляр навигации от Shell или Application.
+            </summary>
+            <returns><see cref="T:Microsoft.Maui.Controls.INavigation"/> для обработки навигации на основе стека.</returns>
+        </member>
+        <member name="M:MauiShared.Services.NavigationService.PushModalAsync(Microsoft.Maui.Controls.Page,System.Boolean)">
+            <summary>
+            Кладет модальную страницу в навигационный стек.
+            </summary>
+            <param name="page">Модальная страница (<see cref="T:Microsoft.Maui.Controls.Page"/>), которая будет положена в стек навигации.</param>
+            <param name="animated">Параметр типа <see cref="T:System.Boolean"/> который указывает, должен ли переход быть анимирован.</param>
+        </member>
+        <member name="M:MauiShared.Services.NavigationService.PopModalAsync(System.Boolean)">
+            <summary>
+            Убирает верхнюю модальную страницу из навигационного стека.
+            </summary>
+            <param name="animated">Параметр типа <see cref="T:System.Boolean"/> который указывает, должен ли переход быть анимирован.</param>
+        </member>
+        <member name="M:MauiShared.Services.NavigationService.PushAsync(Microsoft.Maui.Controls.Page,System.Boolean)">
+            <summary>
+            Кладет страницу в навигационный стек.
+            </summary>
+            <param name="page">Страница (<see cref="T:Microsoft.Maui.Controls.Page"/>), которая будет положена в стек навигации.</param>
+            <param name="animated">Параметр типа <see cref="T:System.Boolean"/> который указывает, должен ли переход быть анимирован.</param>
+        </member>
+        <member name="M:MauiShared.Services.NavigationService.PopAsync(System.Boolean)">
+            <summary>
+            Убирает верхнюю страницу из навигационного стека.
+            </summary>
+            <param name="animated">Параметр типа <see cref="T:System.Boolean"/> который указывает, должен ли переход быть анимирован.</param>
+        </member>
+        <member name="M:MauiShared.Services.SecurityService.ComputeHash(System.String)">
+            <summary>
+            Вычисляет SHA-256 хэш для заданной строки и возвращает его в виде строки Base64.
+            </summary>
+        </member>
+        <member name="M:MauiShared.Services.SecurityService.SaveHashAsync(System.String,System.String)">
+            <summary>
+            Сохраняет хэш в безопасном хранилище с использованием указанного ключа.
+            </summary>
+        </member>
+        <member name="M:MauiShared.Services.SecurityService.CheckHashAsync(System.String,System.String)">
+            <summary>
+            Проверяет, соответствует ли предоставленный хэш хэшу, сохраненному в безопасном хранилище под указанным ключом.
+            </summary>
+        </member>
+        <member name="M:MauiShared.Services.SecurityService.HasHashAsync(System.String)">
+            <summary>
+            Проверяет, существует ли хэш в безопасном хранилище под указанным ключом.
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MauiShared.Services.INavigationService.PushModalAsync(Microsoft.Maui.Controls.Page,System.Boolean)">
+            <summary>
+            Pushes a modal page onto the navigation stack.
+            </summary>
+            <param name="page">The modal <see cref="T:Microsoft.Maui.Controls.Page"/> that will be pushed on the navigation stack.</param>
+            <param name="animated">A <see cref="T:System.Boolean"/> parameter that indicates whether the transition should be animated.</param>
+        </member>
+        <member name="M:MauiShared.Services.INavigationService.PopModalAsync(System.Boolean)">
+            <summary>
+            Pops the top modal page off the navigation stack.
+            </summary>
+            <param name="animated">A <see cref="T:System.Boolean"/> parameter that indicates whether the transition should be animated.</param>
+        </member>
+        <member name="M:MauiShared.Services.INavigationService.PushAsync(Microsoft.Maui.Controls.Page,System.Boolean)">
+            <summary>
+            Pushes a page onto the navigation stack.
+            </summary>
+            <param name="page">The <see cref="T:Microsoft.Maui.Controls.Page"/> that will be pushed on the navigation stack.</param>
+            <param name="animated">A <see cref="T:System.Boolean"/> parameter that indicates whether the transition should be animated.</param>
+        </member>
+        <member name="M:MauiShared.Services.INavigationService.PopAsync(System.Boolean)">
+            <summary>
+            Pops the top page off the navigation stack.
+            </summary>
+            <param name="animated">A <see cref="T:System.Boolean"/> parameter that indicates whether the transition should be animated.</param>
+        </member>
+        <member name="T:MauiShared.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+    </members>
+</doc>

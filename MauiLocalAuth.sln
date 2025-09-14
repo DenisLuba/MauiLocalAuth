@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiLocalAuth", "MauiLocalAuth.csproj", "{AB9E7CDE-F5DC-41EA-82E9-84BEDDE7ACA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiShared", "..\MauiShared\MauiShared.csproj", "{57D35A40-9DA2-D6A7-40FB-01C53DCAD2A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB9E7CDE-F5DC-41EA-82E9-84BEDDE7ACA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB9E7CDE-F5DC-41EA-82E9-84BEDDE7ACA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB9E7CDE-F5DC-41EA-82E9-84BEDDE7ACA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB9E7CDE-F5DC-41EA-82E9-84BEDDE7ACA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57D35A40-9DA2-D6A7-40FB-01C53DCAD2A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57D35A40-9DA2-D6A7-40FB-01C53DCAD2A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57D35A40-9DA2-D6A7-40FB-01C53DCAD2A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57D35A40-9DA2-D6A7-40FB-01C53DCAD2A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6BEF91FA-6F75-47F1-B001-1F42122376FE}
+	EndGlobalSection
+EndGlobal
