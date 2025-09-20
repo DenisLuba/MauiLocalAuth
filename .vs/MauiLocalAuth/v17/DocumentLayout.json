@@ -24,19 +24,6 @@
           "SelectedChildIndex": 8,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LocalAuthPreferencesService.cs",
-              "DocumentMoniker": "V:\\MAUI Projects\\MauiShared\\Services\\Implementations\\LocalAuthPreferencesService.cs",
-              "RelativeDocumentMoniker": "..\\MauiShared\\Services\\Implementations\\LocalAuthPreferencesService.cs",
-              "ToolTip": "V:\\MAUI Projects\\MauiShared\\Services\\Implementations\\LocalAuthPreferencesService.cs",
-              "RelativeToolTip": "..\\MauiShared\\Services\\Implementations\\LocalAuthPreferencesService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T21:13:54.758Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
@@ -66,6 +53,18 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LocalAuthPreferencesService.cs",
+              "DocumentMoniker": "V:\\MAUI Projects\\MauiShared\\Services\\Implementations\\LocalAuthPreferencesService.cs",
+              "RelativeDocumentMoniker": "..\\MauiShared\\Services\\Implementations\\LocalAuthPreferencesService.cs",
+              "ToolTip": "V:\\MAUI Projects\\MauiShared\\Services\\Implementations\\LocalAuthPreferencesService.cs",
+              "RelativeToolTip": "..\\MauiShared\\Services\\Implementations\\LocalAuthPreferencesService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T21:13:54.758Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "SelectEnterMethodPopup.xaml",
               "DocumentMoniker": "V:\\MAUI Projects\\MauiLocalAuth\\Dialogs\\SelectEnterMethodPopup.xaml",
@@ -87,8 +86,7 @@
               "RelativeToolTip": "ViewModels\\SelectEnterMethodPopupViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T21:04:41.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-13T21:04:41.201Z"
             }
           ]
         }

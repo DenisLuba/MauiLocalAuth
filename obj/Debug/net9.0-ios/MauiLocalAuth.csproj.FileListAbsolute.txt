@@ -4,7 +4,6 @@ V:\MAUI Projects\MauiLocalAuth\bin\Debug\net9.0-ios\fr\MauiLocalAuth.resources.d
 V:\MAUI Projects\MauiLocalAuth\bin\Debug\net9.0-ios\ru\MauiLocalAuth.resources.dll
 V:\MAUI Projects\MauiLocalAuth\bin\Debug\net9.0-ios\MauiShared.dll
 V:\MAUI Projects\MauiLocalAuth\bin\Debug\net9.0-ios\MauiShared.pdb
-V:\MAUI Projects\MauiLocalAuth\obj\Debug\net9.0-ios\build-signature\signature
 V:\MAUI Projects\MauiLocalAuth\obj\Debug\net9.0-ios\actool\_PartialAppManifest.items
 V:\MAUI Projects\MauiLocalAuth\obj\Debug\net9.0-ios\actool\_BundleResourceWithLogicalName.items
 V:\MAUI Projects\MauiLocalAuth\obj\Debug\net9.0-ios\actool\_ProcessedImageAssetsPath.items
@@ -38,3 +37,4 @@ V:\MAUI Projects\MauiLocalAuth\obj\Debug\net9.0-ios\MauiLocalAuth.dll
 V:\MAUI Projects\MauiLocalAuth\obj\Debug\net9.0-ios\refint\MauiLocalAuth.dll
 V:\MAUI Projects\MauiLocalAuth\obj\Debug\net9.0-ios\MauiLocalAuth.pdb
 V:\MAUI Projects\MauiLocalAuth\obj\Debug\net9.0-ios\ref\MauiLocalAuth.dll
+V:\MAUI Projects\MauiLocalAuth\obj\Debug\net9.0-ios\MauiLocalAuth.sourcelink.json

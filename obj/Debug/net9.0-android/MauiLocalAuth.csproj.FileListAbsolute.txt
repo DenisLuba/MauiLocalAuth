@@ -106,3 +106,4 @@ V:\MAUI Projects\MauiLocalAuth\obj\Debug\net9.0-android\uploadflags.txt
 V:\MAUI Projects\MauiLocalAuth\obj\Debug\net9.0-android\stamp\_CleanIntermediateIfNeeded.stamp
 V:\MAUI Projects\MauiLocalAuth\obj\Debug\net9.0-android\stamp\_ConvertResourcesCases.stamp
 V:\MAUI Projects\MauiLocalAuth\obj\Debug\net9.0-android\stamp\_ResolveLibraryProjectImports.stamp
+V:\MAUI Projects\MauiLocalAuth\obj\Debug\net9.0-android\MauiLocalAuth.sourcelink.json

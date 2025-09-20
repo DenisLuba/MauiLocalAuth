@@ -27,3 +27,4 @@ V:\MAUI Projects\MauiLocalAuth\obj\Debug\net9.0-windows10.0.19041.0\MauiLocalAut
 V:\MAUI Projects\MauiLocalAuth\obj\Debug\net9.0-windows10.0.19041.0\refint\MauiLocalAuth.dll
 V:\MAUI Projects\MauiLocalAuth\obj\Debug\net9.0-windows10.0.19041.0\MauiLocalAuth.pdb
 V:\MAUI Projects\MauiLocalAuth\obj\Debug\net9.0-windows10.0.19041.0\ref\MauiLocalAuth.dll
+V:\MAUI Projects\MauiLocalAuth\obj\Debug\net9.0-windows10.0.19041.0\MauiLocalAuth.sourcelink.json

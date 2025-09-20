@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MauiLocalAuth")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+310740d7d736a7f697bf415d92cfaf14a1a9e49c")]
 [assembly: System.Reflection.AssemblyProductAttribute("MauiLocalAuth")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MauiLocalAuth")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

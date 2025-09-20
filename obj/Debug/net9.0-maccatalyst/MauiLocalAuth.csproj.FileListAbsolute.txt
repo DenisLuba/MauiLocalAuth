@@ -37,3 +37,4 @@ V:\MAUI Projects\MauiLocalAuth\obj\Debug\net9.0-maccatalyst\MauiLocalAuth.dll
 V:\MAUI Projects\MauiLocalAuth\obj\Debug\net9.0-maccatalyst\refint\MauiLocalAuth.dll
 V:\MAUI Projects\MauiLocalAuth\obj\Debug\net9.0-maccatalyst\MauiLocalAuth.pdb
 V:\MAUI Projects\MauiLocalAuth\obj\Debug\net9.0-maccatalyst\ref\MauiLocalAuth.dll
+V:\MAUI Projects\MauiLocalAuth\obj\Debug\net9.0-maccatalyst\MauiLocalAuth.sourcelink.json
