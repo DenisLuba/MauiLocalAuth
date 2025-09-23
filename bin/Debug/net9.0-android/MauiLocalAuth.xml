@@ -102,18 +102,18 @@
         </member>
         <member name="M:MauiLocalAuth.Controls.PinCodeLockView.AddDigit(System.String)">
             <summary>
-            Добавляет цифру к текущему PIN-коду.
+            Добавляет цифру к полю с PIN-кодом.
             </summary>
             <param name="digit">Цифра в формате <see cref="T:System.String"/></param>
         </member>
         <member name="M:MauiLocalAuth.Controls.PinCodeLockView.RemoveDigit">
             <summary>
-            Удаляет последнюю цифру из текущего PIN-кода.
+            Удаляет последнюю цифру из поля с PIN-кодом.
             </summary>
         </member>
         <member name="M:MauiLocalAuth.Controls.PinCodeLockView.Clear">
             <summary>
-            Очищает текущий PIN-код.
+            Очищает поле с PIN-кодом.
             </summary>
         </member>
         <member name="M:MauiLocalAuth.Dialogs.LocalAuthDialog.OnPinCompleted(System.Object,System.String)">

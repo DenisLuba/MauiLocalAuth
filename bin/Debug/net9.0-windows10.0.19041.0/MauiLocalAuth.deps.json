@@ -11,6 +11,7 @@
           "CommunityToolkit.Mvvm": "8.4.0",
           "MauiShared": "1.0.0",
           "Microsoft.Maui.Controls": "9.0.82",
+          "Plugin.Maui.KeyListener": "1.0.0-preview3",
           "Microsoft.Web.WebView2.Core.Projection": "1.0.3179.45",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.57"
         },
@@ -542,6 +543,14 @@
           }
         }
       },
+      "Plugin.Maui.KeyListener/1.0.0-preview3": {
+        "runtime": {
+          "lib/net9.0-windows10.0.19041/Plugin.Maui.KeyListener.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "MauiShared/1.0.0": {
         "dependencies": {
           "Microsoft.Maui.Controls": "9.0.82"
@@ -734,6 +743,13 @@
       "sha512": "sha512-K5QqtDmMEa6Jy2PLAXKj9XWZoldG21IX5+TPe2XjxtNL/xLlciaqlOe22mjyET26Ry0gEVw0xOaQcpwtLCbMog==",
       "path": "microsoft.windowsappsdk/1.7.250513003",
       "hashPath": "microsoft.windowsappsdk.1.7.250513003.nupkg.sha512"
+    },
+    "Plugin.Maui.KeyListener/1.0.0-preview3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HJnmxs6a1PA/WlcD5jRiIeYgFfarsEHpaA+dB9gxWLq8kDuI6KoHzOemm2VzIA95sacNjq7Gl4ZqlJOrQpj2Zg==",
+      "path": "plugin.maui.keylistener/1.0.0-preview3",
+      "hashPath": "plugin.maui.keylistener.1.0.0-preview3.nupkg.sha512"
     },
     "MauiShared/1.0.0": {
       "type": "project",

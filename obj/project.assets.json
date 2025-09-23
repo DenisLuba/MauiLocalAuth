@@ -418,6 +418,19 @@
           "buildTransitive/Microsoft.Maui.Resizetizer.targets": {}
         }
       },
+      "Plugin.Maui.KeyListener/1.0.0-preview3": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0-android35.0/Plugin.Maui.KeyListener.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0-android35.0/Plugin.Maui.KeyListener.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Xamarin.Android.Glide/4.16.0.12": {
         "type": "package",
         "dependencies": {
@@ -2693,6 +2706,15 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Plugin.Maui.KeyListener/1.0.0-preview3": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0-ios18.0/Plugin.Maui.KeyListener.dll": {}
+        },
+        "runtime": {
+          "lib/net9.0-ios18.0/Plugin.Maui.KeyListener.dll": {}
+        }
+      },
       "MauiShared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -3101,6 +3123,15 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Plugin.Maui.KeyListener/1.0.0-preview3": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0-maccatalyst18.0/Plugin.Maui.KeyListener.dll": {}
+        },
+        "runtime": {
+          "lib/net9.0-maccatalyst18.0/Plugin.Maui.KeyListener.dll": {}
         }
       },
       "MauiShared/1.0.0": {
@@ -3761,6 +3792,15 @@
             "assetType": "native",
             "rid": "win-x86"
           }
+        }
+      },
+      "Plugin.Maui.KeyListener/1.0.0-preview3": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0-windows10.0.19041/Plugin.Maui.KeyListener.dll": {}
+        },
+        "runtime": {
+          "lib/net9.0-windows10.0.19041/Plugin.Maui.KeyListener.dll": {}
         }
       },
       "MauiShared/1.0.0": {
@@ -5845,6 +5885,24 @@
         "tools/x86/GenXbf.dll"
       ]
     },
+    "Plugin.Maui.KeyListener/1.0.0-preview3": {
+      "sha512": "HJnmxs6a1PA/WlcD5jRiIeYgFfarsEHpaA+dB9gxWLq8kDuI6KoHzOemm2VzIA95sacNjq7Gl4ZqlJOrQpj2Zg==",
+      "type": "package",
+      "path": "plugin.maui.keylistener/1.0.0-preview3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net9.0-android35.0/Plugin.Maui.KeyListener.dll",
+        "lib/net9.0-android35.0/Plugin.Maui.KeyListener.xml",
+        "lib/net9.0-ios18.0/Plugin.Maui.KeyListener.dll",
+        "lib/net9.0-maccatalyst18.0/Plugin.Maui.KeyListener.dll",
+        "lib/net9.0-windows10.0.19041/Plugin.Maui.KeyListener.dll",
+        "lib/net9.0/Plugin.Maui.KeyListener.dll",
+        "plugin.maui.keylistener.1.0.0-preview3.nupkg.sha512",
+        "plugin.maui.keylistener.nuspec"
+      ]
+    },
     "Xamarin.Android.Glide/4.16.0.12": {
       "sha512": "ReaxF/UeWqIMdg3NhfrVwugKy8UO++HUH6qCtECWwbyOAXtkgI1HEFg0uPf9mQMyKTHgF7dAQP1rAryvc54VyA==",
       "type": "package",
@@ -7711,24 +7769,28 @@
     "net9.0-android35.0": [
       "CommunityToolkit.Mvvm >= 8.4.0",
       "MauiShared >= 1.0.0",
-      "Microsoft.Maui.Controls >= 9.0.82"
+      "Microsoft.Maui.Controls >= 9.0.82",
+      "Plugin.Maui.KeyListener >= 1.0.0-preview3"
     ],
     "net9.0-ios18.0": [
       "CommunityToolkit.Mvvm >= 8.4.0",
       "MauiShared >= 1.0.0",
       "Microsoft.Maui.Controls >= 9.0.82",
-      "Microsoft.NET.ILLink.Tasks >= 9.0.9"
+      "Microsoft.NET.ILLink.Tasks >= 9.0.9",
+      "Plugin.Maui.KeyListener >= 1.0.0-preview3"
     ],
     "net9.0-maccatalyst18.0": [
       "CommunityToolkit.Mvvm >= 8.4.0",
       "MauiShared >= 1.0.0",
       "Microsoft.Maui.Controls >= 9.0.82",
-      "Microsoft.NET.ILLink.Tasks >= 9.0.9"
+      "Microsoft.NET.ILLink.Tasks >= 9.0.9",
+      "Plugin.Maui.KeyListener >= 1.0.0-preview3"
     ],
     "net9.0-windows10.0.19041": [
       "CommunityToolkit.Mvvm >= 8.4.0",
       "MauiShared >= 1.0.0",
-      "Microsoft.Maui.Controls >= 9.0.82"
+      "Microsoft.Maui.Controls >= 9.0.82",
+      "Plugin.Maui.KeyListener >= 1.0.0-preview3"
     ]
   },
   "packageFolders": {
@@ -7821,6 +7883,10 @@
           "Microsoft.Maui.Controls": {
             "target": "Package",
             "version": "[9.0.82, )"
+          },
+          "Plugin.Maui.KeyListener": {
+            "target": "Package",
+            "version": "[1.0.0-preview3, )"
           }
         },
         "imports": [
@@ -7860,6 +7926,10 @@
             "target": "Package",
             "version": "[9.0.9, )",
             "autoReferenced": true
+          },
+          "Plugin.Maui.KeyListener": {
+            "target": "Package",
+            "version": "[1.0.0-preview3, )"
           }
         },
         "imports": [
@@ -7899,6 +7969,10 @@
             "target": "Package",
             "version": "[9.0.9, )",
             "autoReferenced": true
+          },
+          "Plugin.Maui.KeyListener": {
+            "target": "Package",
+            "version": "[1.0.0-preview3, )"
           }
         },
         "imports": [
@@ -7933,6 +8007,10 @@
           "Microsoft.Maui.Controls": {
             "target": "Package",
             "version": "[9.0.82, )"
+          },
+          "Plugin.Maui.KeyListener": {
+            "target": "Package",
+            "version": "[1.0.0-preview3, )"
           }
         },
         "imports": [

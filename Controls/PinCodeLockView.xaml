@@ -2,15 +2,13 @@
 <ContentView x:Class="MauiLocalAuth.Controls.PinCodeLockView"
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:k1="clr-namespace:Plugin.Maui.KeyListener;assembly=Plugin.Maui.KeyListener"
              xmlns:controls="clr-namespace:MauiLocalAuth.Controls"
              xmlns:converters="clr-namespace:MauiLocalAuth.Converters"
-             x:Name="Root"
              x:DataType="controls:PinCodeLockView">
 
 	<ContentView.Resources>
-		<ResourceDictionary>
-			<converters:PinCircleFillConverter x:Key="pinCircleFillConverter" />
-		</ResourceDictionary>
+		<converters:PinCircleFillConverter x:Key="pinCircleFillConverter" />
 
 		<Style TargetType="Ellipse">
 			<Setter Property="HorizontalOptions" Value="Center" />
@@ -23,42 +21,29 @@
 			<Setter Property="Margin" Value="4" />
 		</Style>
 
-		<Style TargetType="Button">
-			<Setter Property="WidthRequest" Value="72" />
+		<Style x:Key="DigitGridStyle"
+		       TargetType="Grid">
 			<Setter Property="HeightRequest" Value="72" />
-			<Setter Property="CornerRadius" Value="8" />
+			<Setter Property="WidthRequest" Value="72" />
+			<Setter Property="BackgroundColor" Value="Transparent" />
+		</Style>
+
+		<Style x:Key="DigitLabelStyle"
+		       TargetType="Label">
 			<Setter Property="FontSize" Value="24" />
 			<Setter Property="TextColor" Value="DarkSlateGray" />
-			<Setter Property="BackgroundColor" Value="Transparent" />
-			<Setter Property="VisualStateManager.VisualStateGroups">
-				<VisualStateGroupList>
-					<VisualStateGroup Name="CommonStates">
-
-						<VisualState Name="Normal">
-							<VisualState.Setters>
-								<Setter Property="BackgroundColor" Value="Transparent" />
-							</VisualState.Setters>
-						</VisualState>
-
-						<VisualState Name="Pressed">
-							<VisualState.Setters>
-								<Setter Property="BackgroundColor" Value="#22000000" />
-								<Setter Property="Shadow">
-									<Shadow Brush="Black"
-									        Opacity="0.3"
-									        Radius="6"
-									        Offset="2,2" />
-								</Setter>
-							</VisualState.Setters>
-						</VisualState>
-
-					</VisualStateGroup>
-				</VisualStateGroupList>
-			</Setter>
+			<Setter Property="HorizontalOptions" Value="Center" />
+			<Setter Property="VerticalOptions" Value="Center" />
+			<Setter Property="Scale" Value="1" />
 		</Style>
 	</ContentView.Resources>
 
-	<VerticalStackLayout Padding="8"
+	<ContentView.Behaviors>
+			<k1:KeyboardBehavior KeyDown="OnKeyDown"/>
+	</ContentView.Behaviors>
+
+	<VerticalStackLayout x:Name="TableStackLayout"
+	                     Padding="8"
 	                     HorizontalOptions="Center"
 	                     Spacing="12"
 	                     VerticalOptions="Center">
@@ -76,13 +61,13 @@
 			      HorizontalOptions="Center"
 			      VerticalOptions="Center">
 				<Ellipse Grid.Column="0"
-				         Fill="{Binding Source={x:Reference Root}, Path=PinCode, Converter={StaticResource pinCircleFillConverter}, ConverterParameter=1}" />
+				         Fill="{Binding PinCode, Converter={StaticResource pinCircleFillConverter}, ConverterParameter=1}" />
 				<Ellipse Grid.Column="1"
-				         Fill="{Binding Source={x:Reference Root}, Path=PinCode, Converter={StaticResource pinCircleFillConverter}, ConverterParameter=2}" />
+				         Fill="{Binding PinCode, Converter={StaticResource pinCircleFillConverter}, ConverterParameter=2}" />
 				<Ellipse Grid.Column="2"
-				         Fill="{Binding Source={x:Reference Root}, Path=PinCode, Converter={StaticResource pinCircleFillConverter}, ConverterParameter=3}" />
+				         Fill="{Binding PinCode, Converter={StaticResource pinCircleFillConverter}, ConverterParameter=3}" />
 				<Ellipse Grid.Column="3"
-				         Fill="{Binding Source={x:Reference Root}, Path=PinCode, Converter={StaticResource pinCircleFillConverter}, ConverterParameter=4}" />
+				         Fill="{Binding PinCode, Converter={StaticResource pinCircleFillConverter}, ConverterParameter=4}" />
 			</Grid>
 		</Border>
 
@@ -93,66 +78,140 @@
 		      RowSpacing="8">
 
 			<!--  Row 0  -->
-			<Button Grid.Row="0"
-			        Grid.Column="0"
-			        Command="{Binding Source={x:Reference Root}, Path=AddDigitCommand}"
-			        CommandParameter="1"
-			        Text="1" />
-			<Button Grid.Row="0"
-			        Grid.Column="1"
-			        Command="{Binding Source={x:Reference Root}, Path=AddDigitCommand}"
-			        CommandParameter="2"
-			        Text="2" />
-			<Button Grid.Row="0"
-			        Grid.Column="2"
-			        Command="{Binding Source={x:Reference Root}, Path=AddDigitCommand}"
-			        CommandParameter="3"
-			        Text="3" />
+			<Grid x:Name="Digit1"
+			      Grid.Row="0"
+			      Grid.Column="0"
+			      Style="{StaticResource DigitGridStyle}">
+				<Label Style="{StaticResource DigitLabelStyle}"
+				       Text="1" />
+				<Grid.GestureRecognizers>
+					<TapGestureRecognizer Command="{Binding AddDigitCommand}"
+					                      CommandParameter="1" />
+				</Grid.GestureRecognizers>
+			</Grid>
+
+			<Grid x:Name="Digit2"
+			      Grid.Row="0"
+			      Grid.Column="1"
+			      Style="{StaticResource DigitGridStyle}">
+				<Label Style="{StaticResource DigitLabelStyle}"
+				       Text="2" />
+				<Grid.GestureRecognizers>
+					<TapGestureRecognizer Command="{Binding AddDigitCommand}"
+					                      CommandParameter="2" />
+				</Grid.GestureRecognizers>
+			</Grid>
+
+			<Grid x:Name="Digit3"
+			      Grid.Row="0"
+			      Grid.Column="2"
+			      Style="{StaticResource DigitGridStyle}">
+				<Label Style="{StaticResource DigitLabelStyle}"
+				       Text="3" />
+				<Grid.GestureRecognizers>
+					<TapGestureRecognizer Command="{Binding AddDigitCommand}"
+					                      CommandParameter="3" />
+				</Grid.GestureRecognizers>
+			</Grid>
 
 			<!--  Row 1  -->
-			<Button Grid.Row="1"
-			        Grid.Column="0"
-			        Command="{Binding Source={x:Reference Root}, Path=AddDigitCommand}"
-			        CommandParameter="4"
-			        Text="4" />
-			<Button Grid.Row="1"
-			        Grid.Column="1"
-			        Command="{Binding Source={x:Reference Root}, Path=AddDigitCommand}"
-			        CommandParameter="5"
-			        Text="5" />
-			<Button Grid.Row="1"
-			        Grid.Column="2"
-			        Command="{Binding Source={x:Reference Root}, Path=AddDigitCommand}"
-			        CommandParameter="6"
-			        Text="6" />
+			<Grid x:Name="Digit4"
+			      Grid.Row="1"
+			      Grid.Column="0"
+			      Style="{StaticResource DigitGridStyle}">
+				<Label Style="{StaticResource DigitLabelStyle}"
+				       Text="4" />
+				<Grid.GestureRecognizers>
+					<TapGestureRecognizer Command="{Binding AddDigitCommand}"
+					                      CommandParameter="4" />
+				</Grid.GestureRecognizers>
+			</Grid>
+
+			<Grid x:Name="Digit5"
+			      Grid.Row="1"
+			      Grid.Column="1"
+			      Style="{StaticResource DigitGridStyle}">
+				<Label Style="{StaticResource DigitLabelStyle}"
+				       Text="5" />
+				<Grid.GestureRecognizers>
+					<TapGestureRecognizer Command="{Binding AddDigitCommand}"
+					                      CommandParameter="5" />
+				</Grid.GestureRecognizers>
+			</Grid>
+
+			<Grid x:Name="Digit6"
+			      Grid.Row="1"
+			      Grid.Column="2"
+			      Style="{StaticResource DigitGridStyle}">
+				<Label Style="{StaticResource DigitLabelStyle}"
+				       Text="6" />
+				<Grid.GestureRecognizers>
+					<TapGestureRecognizer Command="{Binding AddDigitCommand}"
+					                      CommandParameter="6" />
+				</Grid.GestureRecognizers>
+			</Grid>
 
 			<!--  Row 2  -->
-			<Button Grid.Row="2"
-			        Grid.Column="0"
-			        Command="{Binding Source={x:Reference Root}, Path=AddDigitCommand}"
-			        CommandParameter="7"
-			        Text="7" />
-			<Button Grid.Row="2"
-			        Grid.Column="1"
-			        Command="{Binding Source={x:Reference Root}, Path=AddDigitCommand}"
-			        CommandParameter="8"
-			        Text="8" />
-			<Button Grid.Row="2"
-			        Grid.Column="2"
-			        Command="{Binding Source={x:Reference Root}, Path=AddDigitCommand}"
-			        CommandParameter="9"
-			        Text="9" />
+			<Grid x:Name="Digit7"
+			      Grid.Row="2"
+			      Grid.Column="0"
+			      Style="{StaticResource DigitGridStyle}">
+				<Label Style="{StaticResource DigitLabelStyle}"
+				       Text="7" />
+				<Grid.GestureRecognizers>
+					<TapGestureRecognizer Command="{Binding AddDigitCommand}"
+					                      CommandParameter="7" />
+				</Grid.GestureRecognizers>
+			</Grid>
+
+			<Grid x:Name="Digit8"
+			      Grid.Row="2"
+			      Grid.Column="1"
+			      Style="{StaticResource DigitGridStyle}">
+				<Label Style="{StaticResource DigitLabelStyle}"
+				       Text="8" />
+				<Grid.GestureRecognizers>
+					<TapGestureRecognizer Command="{Binding AddDigitCommand}"
+					                      CommandParameter="8" />
+				</Grid.GestureRecognizers>
+			</Grid>
+
+			<Grid x:Name="Digit9"
+			      Grid.Row="2"
+			      Grid.Column="2"
+			      Style="{StaticResource DigitGridStyle}">
+				<Label Style="{StaticResource DigitLabelStyle}"
+				       Text="9" />
+				<Grid.GestureRecognizers>
+					<TapGestureRecognizer Command="{Binding AddDigitCommand}"
+					                      CommandParameter="9" />
+				</Grid.GestureRecognizers>
+			</Grid>
 
 			<!--  Row 3  -->
-			<Button Grid.Row="3"
-			        Grid.Column="0"
-			        Command="{Binding Source={x:Reference Root}, Path=RemoveDigitCommand}"
-			        Text="⌫" />
-			<Button Grid.Row="3"
-			        Grid.Column="1"
-			        Command="{Binding Source={x:Reference Root}, Path=AddDigitCommand}"
-			        CommandParameter="0"
-			        Text="0" />
+			<Grid x:Name="Backspace"
+			      Grid.Row="3"
+			      Grid.Column="0"
+			      Style="{StaticResource DigitGridStyle}">
+				<Label Style="{StaticResource DigitLabelStyle}"
+				       Text="⌫" />
+				<Grid.GestureRecognizers>
+					<TapGestureRecognizer Command="{Binding RemoveDigitCommand}" />
+				</Grid.GestureRecognizers>
+			</Grid>
+
+			<Grid x:Name="Digit0"
+			      Grid.Row="3"
+			      Grid.Column="1"
+			      Style="{StaticResource DigitGridStyle}">
+				<Label Style="{StaticResource DigitLabelStyle}"
+				       Text="0" />
+				<Grid.GestureRecognizers>
+					<TapGestureRecognizer Command="{Binding AddDigitCommand}"
+					                      CommandParameter="0" />
+				</Grid.GestureRecognizers>
+			</Grid>
 		</Grid>
 	</VerticalStackLayout>
+
 </ContentView>

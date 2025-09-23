@@ -90,6 +90,10 @@
             "Microsoft.Maui.Controls": {
               "target": "Package",
               "version": "[9.0.82, )"
+            },
+            "Plugin.Maui.KeyListener": {
+              "target": "Package",
+              "version": "[1.0.0-preview3, )"
             }
           },
           "imports": [
@@ -129,6 +133,10 @@
               "target": "Package",
               "version": "[9.0.9, )",
               "autoReferenced": true
+            },
+            "Plugin.Maui.KeyListener": {
+              "target": "Package",
+              "version": "[1.0.0-preview3, )"
             }
           },
           "imports": [
@@ -168,6 +176,10 @@
               "target": "Package",
               "version": "[9.0.9, )",
               "autoReferenced": true
+            },
+            "Plugin.Maui.KeyListener": {
+              "target": "Package",
+              "version": "[1.0.0-preview3, )"
             }
           },
           "imports": [
@@ -202,6 +214,10 @@
             "Microsoft.Maui.Controls": {
               "target": "Package",
               "version": "[9.0.82, )"
+            },
+            "Plugin.Maui.KeyListener": {
+              "target": "Package",
+              "version": "[1.0.0-preview3, )"
             }
           },
           "imports": [
