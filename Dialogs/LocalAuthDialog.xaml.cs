@@ -10,6 +10,8 @@ public partial class LocalAuthDialog : ContentPage
     private readonly LocalAuthDialogViewModel _viewModel; 
     #endregion
 
+    public LocalAuthDialogViewModel ViewModel => _viewModel;
+
     #region Constructor
     public LocalAuthDialog(LocalAuthDialogViewModel viewModel)
     {

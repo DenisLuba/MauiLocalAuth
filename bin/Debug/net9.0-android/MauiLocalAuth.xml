@@ -254,7 +254,7 @@
         </member>
         <member name="M:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel.HandlePatternInputAsync(System.String)">
             <summary>
-            Обрабатывает ввод графического узора.
+            Обрабатывает ввод графического узора и управляет логикой первого ввода и подтверждения.
             </summary>
         </member>
         <member name="M:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel.PatternCompletedAsync(System.String)">
@@ -262,10 +262,25 @@
             Обрабатывает завершение ввода графического узора.
             </summary>
         </member>
+        <member name="M:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel.HandlePinInputAsync(System.String)">
+            <summary>
+            Обрабатывает ввод PIN-кода и управляет логикой первого ввода и подтверждения.
+            </summary>
+            <param name="pinCode">ПИН-КОД</param>
+        </member>
         <member name="M:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel.PinCodeCompletedAsync(System.String)">
             <summary>
             Обрабатывает завершение ввода PIN-кода.
             </summary>
+        </member>
+        <member name="M:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel.EntranceCompletedAsync(System.String,System.String,System.String)">
+            <summary>
+            Обрабатывает завершение ввода (графического узора или ПИН-КОДА) с возможностью указания сообщения об ошибке.
+            </summary>
+            <param name="code">ПИН-КОД или графический узор (его строковое представление)</param>
+            <param name="hashKey">Ключ для значения в хранилище.</param>
+            <param name="errorMessage">Сообщение об ошибке.</param>
+            <returns></returns>
         </member>
         <member name="P:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel.IsPattern">
             <inheritdoc cref="F:MauiLocalAuth.ViewModels.LocalAuthDialogViewModel._isPattern"/>

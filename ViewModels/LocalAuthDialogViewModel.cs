@@ -22,8 +22,8 @@ public partial class LocalAuthDialogViewModel(
     private const string PATTERN_HASH_KEY = "HASH KEY";
     private const string PIN_CODE_HASH_KEY = "PIN CODE HASH KEY";
 
-    public const string PATTERN_TEMPLATE = "PATTERN TEMPLATE";
-    public const string PIN_CODE_TEMPLATE = "PIN CODE TEMPLATE";
+    internal const string PATTERN_TEMPLATE = "PATTERN TEMPLATE";
+    internal const string PIN_CODE_TEMPLATE = "PIN CODE TEMPLATE";
     #endregion
 
     #region Private Fields
@@ -31,11 +31,15 @@ public partial class LocalAuthDialogViewModel(
     private bool _isFirstSetup; // это первый вход?
     #endregion
 
+    #region EntranceCompletedEvent
+    public EventHandler<bool>? EntranceCompletedEvent; 
+    #endregion
+
     #region InitializeAsync Method
     /// <summary>
     /// Загружает настройки методов локальной аутентификации и обновляет свойства IsPattern и IsPinCode.
     /// </summary>
-    public async Task InitializeAsync()
+    internal async Task InitializeAsync()
     {
         var methods = await authPreferencesService.GetAuthMethodAsync();
 
@@ -54,9 +58,9 @@ public partial class LocalAuthDialogViewModel(
 
     #region HandlePatternInputAsync Method
     /// <summary>
-    /// Обрабатывает ввод графического узора.
+    /// Обрабатывает ввод графического узора и управляет логикой первого ввода и подтверждения.
     /// </summary>
-    public async Task HandlePatternInputAsync(string pattern)
+    internal async Task HandlePatternInputAsync(string pattern)
     {
         if (_isFirstSetup)
         {
@@ -93,23 +97,19 @@ public partial class LocalAuthDialogViewModel(
     /// <summary>
     /// Обрабатывает завершение ввода графического узора.
     /// </summary>
-    public async Task PatternCompletedAsync(string pattern)
-    {
-        var hash = securityService.ComputeHash(pattern);
-        var isValid = await securityService.CheckHashAsync(PATTERN_HASH_KEY, hash);
-
-        if (isValid)
-        {
-            await navigationService.PopModalAsync(true);
-        }
-        else
-        {
-            await Shell.Current.DisplayAlert(ResourcesLocalAuthDialogViewModel.error, ResourcesLocalAuthDialogViewModel.invalid_pattern, "OK");
-        }
-    }
+    internal async Task PatternCompletedAsync(string pattern) =>
+        await EntranceCompletedAsync(
+            code: pattern, 
+            hashKey: PATTERN_HASH_KEY, 
+            errorMessage: ResourcesLocalAuthDialogViewModel.invalid_pattern);
     #endregion
 
-    public async Task HandlePinInputAsync(string pinCode)
+    #region HandlePinInputAsync Method
+    /// <summary>
+    /// Обрабатывает ввод PIN-кода и управляет логикой первого ввода и подтверждения.
+    /// </summary>
+    /// <param name="pinCode">ПИН-КОД</param>
+    internal async Task HandlePinInputAsync(string pinCode)
     {
         if (_isFirstSetup)
         {
@@ -138,34 +138,53 @@ public partial class LocalAuthDialogViewModel(
         {
             await PinCodeCompletedAsync(pinCode);
         }
-    }
+    } 
+    #endregion
 
     #region PinCodeCompletedCommand
     /// <summary>
     /// Обрабатывает завершение ввода PIN-кода.
     /// </summary>
     [RelayCommand]
-    public async Task PinCodeCompletedAsync(string pinCode)
-    {
-        var hash = securityService.ComputeHash(pinCode);
-        var isValid = await securityService.CheckHashAsync(PIN_CODE_HASH_KEY, hash);
-
-        if (isValid)
-        {
-            await navigationService.PopModalAsync(true);
-        }
-        else
-        {
-            await Shell.Current.DisplayAlert(ResourcesLocalAuthDialogViewModel.error, ResourcesLocalAuthDialogViewModel.invalid_pin_code, "OK");
-        }
-    }
+    internal async Task PinCodeCompletedAsync(string pinCode) => 
+        await EntranceCompletedAsync(
+            code: pinCode, 
+            hashKey: PIN_CODE_HASH_KEY, 
+            errorMessage: ResourcesLocalAuthDialogViewModel.invalid_pin_code);
     #endregion
 
+    #region CloseCommand
     [RelayCommand]
-    public async Task CloseAsync()
+    internal async Task CloseAsync()
     {
         if (authPage is not null) await Shell.Current.GoToAsync(authPage);
 
         await navigationService.PopModalAsync(true);
     }
+    #endregion
+
+    #region EntranceCompletedAsync Method
+    /// <summary>
+    /// Обрабатывает завершение ввода (графического узора или ПИН-КОДА) с возможностью указания сообщения об ошибке.
+    /// </summary>
+    /// <param name="code">ПИН-КОД или графический узор (его строковое представление)</param>
+    /// <param name="hashKey">Ключ для значения в хранилище.</param>
+    /// <param name="errorMessage">Сообщение об ошибке.</param>
+    /// <returns></returns>
+    private async Task EntranceCompletedAsync(string code, string hashKey, string errorMessage)
+    {
+        var hash = securityService.ComputeHash(code);
+        var isValid = await securityService.CheckHashAsync(hashKey, hash);
+
+        if (isValid)
+        {
+            EntranceCompletedEvent?.Invoke(this, true);
+            await navigationService.PopModalAsync(true);
+        }
+        else
+        {
+            await Shell.Current.DisplayAlert(ResourcesLocalAuthDialogViewModel.error, errorMessage, "OK");
+        }
+    } 
+    #endregion
 }
